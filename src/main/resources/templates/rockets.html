@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpaceX Rockets Data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <table id="Rockets">
+        <tr>
+            <td>Total number</td>
+            <td th:text="${total}"></td>
+        </tr>
+        <tr>
+            <td>Active number</td>
+            <td th:text="${active}"></td>
+        </tr>
+        <tr>
+            <td>Average Launch Cost</td>
+            <td th:text="${cost}"></td>
+        </tr>
+        <tr>
+            <td>Average Success Rate</td>
+            <td th:text="${rate}"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpaceX Ships Data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <table id="Ships">
+        <tr>
+            <td>Total number</td>
+            <td th:text="${total}"></td>
+        </tr>
+        <tr>
+            <td>Active number</td>
+            <td th:text="${active}"></td>
+        </tr>
+    </table>
+    <table id="Ports">
+        <thead>
+        <tr>
+            <td>Port</td>
+            <td>Number of ships</td>
+        </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="port : ${ports}">
+                <tr>
+                    <td th:text="${port.getName()}"></td>
+                    <td th:text="${port.getNumber()}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>

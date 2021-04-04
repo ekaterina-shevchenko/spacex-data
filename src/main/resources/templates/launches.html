@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpaceX Launches Data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <table id="Launches">
+        <tr>
+            <td>Total number</td>
+            <td th:text="${total}"></td>
+        </tr>
+        <tr>
+            <td>Successful number</td>
+            <td th:text="${successful}"></td>
+        </tr>
+        <tr>
+            <td>Average Time To Failure</td>
+            <td th:text="${time}"></td>
+        </tr>
+    </table>
+    <table id="Failures">
+        <thead>
+            <tr>
+                <td>Failure</td>
+                <td>Number</td>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="failure : ${failures}">
+                <tr>
+                    <td th:text="${failure.getKey()}"></td>
+                    <td th:text="${failure.getValue()}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+table {
+    border: 1px solid rgb(93, 132, 255);
+    margin: 10px;
+    padding: 5px;
+}
+
+thead {
+    background-color: rgba(230,177,255,0.5);
+}
+
+thead tr td {
+    padding: 4px;
+}
+
+td {
+    border-bottom: 1px solid rgb(93, 132, 255);
+}
